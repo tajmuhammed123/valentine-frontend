@@ -226,8 +226,8 @@ export default function App() {
     }
   }, [view, adminKey]);
 
-  const canSubmit = valentineId && !submitting && !success;
   const canSendDevice = deviceId && deviceId.length > 0;
+  const canSubmit = valentineId && canSendDevice && !submitting && !success;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
