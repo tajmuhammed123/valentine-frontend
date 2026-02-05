@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || import.meta.env.VITE_API_URL || "http://localhost:4000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://valentine-backend-a68b.onrender.com";
+console.log("[v0] API_URL:", API_URL);
+console.log("[v0] NEXT_PUBLIC_API_URL:", process.env.NEXT_PUBLIC_API_URL);
 
 const fun = {
   needValentine: [
