@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import FingerprintJS from "@fingerprintjs/fingerprintjs";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
 
@@ -174,17 +175,22 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const key = "valentines_device_id";
-    const existing = localStorage.getItem(key);
-    if (existing) {
-      setDeviceId(existing);
-      return;
-    }
-    const newId =
-      (typeof crypto !== "undefined" && crypto.randomUUID && crypto.randomUUID()) ||
-      `device_${Math.random().toString(36).slice(2)}${Date.now().toString(36)}`;
-    localStorage.setItem(key, newId);
-    setDeviceId(newId);
+    let cancelled = false;
+    const initFingerprint = async () => {
+      try {
+        const fp = await FingerprintJS.load();
+        const result = await fp.get();
+        if (cancelled) return;
+        setDeviceId(result.visitorId);
+      } catch (err) {
+        if (cancelled) return;
+        setDeviceId("");
+      }
+    };
+    initFingerprint();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const valentineOptions = useMemo(() => employees, [employees]);
