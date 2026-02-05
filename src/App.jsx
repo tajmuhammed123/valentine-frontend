@@ -5,103 +5,109 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
 const fun = {
   needValentine: [
     "Pick a valentine—Cupid refuses empty forms 😎",
-    "Select a valentine before Cupid starts filing complaints 📋",
-    "You missed the most important dropdown, Casanova 😅",
-    "No selection is like sending a love letter without a stamp 💌",
-    "Choose a valentine or Cupid starts charging late fees 💸",
-    "Pick someone before the chocolates melt 🫠"
+    "No selection and Cupid is tapping his tiny foot 👣",
+    "Choose someone before the chocolates melt 🍫",
   ],
+
   loadingEmployees: [
     "Summoning the employee list with dramatic flair ✨",
     "Warming up the Cupid database—stand by 💾",
     "Fetching names faster than a love triangle starts 🏃",
     "Assembling the roster of romantic possibilities 🗂️",
-    "Checking the office crush registry 👀"
+    "Checking the office crush registry 👀",
   ],
+
   loadEmployeesError: [
     "We lost the employee list in a glitter storm ✨",
     "Cupid misplaced the roster again, classic 🫠",
     "The list ghosted us, tragic 💔",
     "Roster not found—Cupid blames Mercury retrograde 🪐",
-    "We asked for names and got vibes instead 🌈"
+    "We asked for names and got vibes instead 🌈",
   ],
+
   submitSuccess: [
-    "Vote delivered—Cupid updated his spreadsheet 📈",
-    "Success, your valentine was notified by carrier pigeon 🕊️",
-    "Vote recorded and love is now in the database 💾",
-    "Sweet, your vote landed safely in Cupid’s inbox 📬",
-    "Done, Cupid stamped this with a heart seal 💘"
+    "Ijj sundari allenn aaraa paranje... ❤️",
+    "Ninnekkondonnum koottiya koodilla, nalla prayandalloo, valla panikkum podoo",
+    "Enikkum ishtamaan, kalyanam kazhikkan thayyarumaan, appo enthaann vechaa..! 💍",
+    "Parasparam onn cheranulla oravasaravum nammal pazhakkaruth",
+    "Nokki irunnoo, ippo kittum...!",
+    "Kuttyy onn manass vechaa, ee kalavara namukkoru maniyarayakkam 💘",
+    "Ente nenjaake neeyalle....",
+    "Porunnoo ente koode",
   ],
+
   submitError: [
     "Vote failed—Cupid tripped over a cable 😵",
     "Nope, the love server said not today 🙅",
-    "Error because Cupid’s Wi‑Fi is acting single 📶",
+    "Error because Cupid’s Wi-Fi is acting single 📶",
     "System error, Cupid is rebooting his wings 🔄",
-    "Something broke, blame the chocolates 🍫"
+    "Something broke, blame the chocolates 🍫",
   ],
+
   dupeIp: [
-    "One vote per user—Cupid saw you double‑click 👀",
-    "Nice try, the user bouncer says you already voted 🚫",
-    "Duplicate detected because love is a one‑time offer 💘",
-    "Sorry Romeo, this user has already serenaded 🎤",
-    "No doubles allowed—Cupid has receipts 🧾"
+    "Ninakk kalaparamayittulla kazhiv undoo, ninne nalalu ariyumoo... 👀",
+    "Dont try play fool with me Nikesh....",
+    "Velachil edukkaruth kettooo...",
+    "Oh god, You againnnn, veendum ningalooo!!!!",
+    "Koutham lesham kooduthala, maappakkanam!!",
+    "Ninne kandappo thanne enikk manassilayii, nee verum koothara alla looka koothara aanenn",
   ],
+
   invalidEmployee: [
-    "That valentine doesn’t exist in this universe 🌀",
-    "Invalid pick—Cupid is confused 🤔",
-    "That name isn’t on the list, plot twist 🎬",
-    "Fake ID detected and Cupid is not impressed 🪪",
-    "That valentine is fictional, try reality 📺"
+    "That valentine ID looks fake and Cupid is unimpressed 🕵️",
+    "Invalid ID because Cupid now has trust issues 🫥",
+    "Nice try, that ID is not in the love database 📇",
   ],
+
   employeeNotFound: [
-    "That valentine vanished into the mist 🌫️",
-    "Employee not found, maybe on a romance sabbatical 🌴",
+    "That valentine vanished into the mist, try again 🌫️",
+    "Employee not found and Cupid checked twice 🔍",
     "Nope, that person is off the love grid 📡",
-    "Cupid checked twice and still missing 🔍",
-    "That name is a myth in the office lore 📖"
   ],
+
   adminNeedPassword: [
-    "Password required because Cupid insists on security 🔐",
-    "Admin access denied until you whisper the secret word 🤫",
-    "No password, no peeking—rules of love apply 💘",
-    "Say the magic word or the vault stays shut 🗝️",
-    "Admin gate locked and Cupid hid the key 🔒"
+    "Pha paranari nee aaroodaan evide ninnaan kalikkunnathenn orma venom? 🤨",
+    "Ezheech podooo",
+    "Thurakkilla makaneeee",
   ],
+
   adminGranted: [
     "Access granted, proceed to the love stats 📊",
     "Welcome Admin, may your spreadsheets be romantic 📈",
     "You’re in, try not to trip on the roses 🌹",
     "Open sesame and the stats await 🧮",
-    "Authorized, Cupid salutes you 🫡"
+    "Authorized, Cupid salutes you 🫡",
   ],
+
   adminUnauthorized: [
-    "Wrong password and Cupid just shook his head 🙄",
-    "Access denied because the love vault stays locked 🔒",
-    "Nope, the admin door remains romantically sealed 🧱",
-    "Incorrect, Cupid activated the glitter alarm ✨",
-    "Access denied, try the password not the vibes 🎧"
+    "Nope, the love vault stays locked 🔒",
+    "Access denied because Cupid activated the glitter alarm ✨",
+    "Wrong password and Cupid shook his head 🙄",
   ],
+
   resultsLoading: [
     "Counting love letters in real time 💌",
     "Tallying hearts and spreadsheets 📊",
     "Asking Cupid to do math 🧮",
     "Crunching votes like cookies 🍪",
-    "Summoning the leaderboard with dramatic flair ✨"
+    "Summoning the leaderboard with dramatic flair ✨",
   ],
+
   resultsEmpty: [
     "No votes yet because Cupid is still warming up 🔥",
     "The leaderboard is empty—love takes time ⏳",
     "Zero votes and the romantic suspense is real 🎭",
     "Nothing yet because Cupid is tying his shoelaces 👟",
-    "No love data yet, the drama builds 📽️"
+    "No love data yet, the drama builds 📽️",
   ],
+
   resultsError: [
     "Couldn’t load results because Cupid dropped the clipboard 📋",
     "Stats are hiding, please try again 🫣",
     "Results failed and the love server needs a pep talk 📣",
     "The leaderboard ran away with the chocolates 🍫",
-    "Error loading results because Cupid needs coffee ☕"
-  ]
+    "Error loading results because Cupid needs coffee ☕",
+  ],
 };
 
 const pick = (list) => list[Math.floor(Math.random() * list.length)];
@@ -109,8 +115,10 @@ const pick = (list) => list[Math.floor(Math.random() * list.length)];
 const formatVoteError = (rawMessage) => {
   if (!rawMessage) return pick(fun.submitError);
   if (rawMessage.toLowerCase().includes("ip address")) return pick(fun.dupeIp);
-  if (rawMessage.toLowerCase().includes("invalid")) return pick(fun.invalidEmployee);
-  if (rawMessage.toLowerCase().includes("not found")) return pick(fun.employeeNotFound);
+  if (rawMessage.toLowerCase().includes("invalid"))
+    return pick(fun.invalidEmployee);
+  if (rawMessage.toLowerCase().includes("not found"))
+    return pick(fun.employeeNotFound);
   return pick(fun.submitError);
 };
 
@@ -127,17 +135,27 @@ export default function App() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [view, setView] = useState(
-    typeof window !== "undefined" && window.location.hash === "#/admin" ? "admin" : "vote"
+    typeof window !== "undefined" && window.location.hash === "#/admin"
+      ? "admin"
+      : "vote",
   );
   const [results, setResults] = useState([]);
   const [resultsLoading, setResultsLoading] = useState(false);
   const [resultsError, setResultsError] = useState("");
-  const [adminKey, setAdminKey] = useState(() => sessionStorage.getItem("adminKey") || "");
+  const [adminKey, setAdminKey] = useState(
+    () => sessionStorage.getItem("adminKey") || "",
+  );
   const [adminInput, setAdminInput] = useState("");
   const [adminMessage, setAdminMessage] = useState("");
-  const [loadingMessage, setLoadingMessage] = useState(pick(fun.loadingEmployees));
-  const [resultsLoadingMessage, setResultsLoadingMessage] = useState(pick(fun.resultsLoading));
-  const [emptyResultsMessage, setEmptyResultsMessage] = useState(pick(fun.resultsEmpty));
+  const [loadingMessage, setLoadingMessage] = useState(
+    pick(fun.loadingEmployees),
+  );
+  const [resultsLoadingMessage, setResultsLoadingMessage] = useState(
+    pick(fun.resultsLoading),
+  );
+  const [emptyResultsMessage, setEmptyResultsMessage] = useState(
+    pick(fun.resultsEmpty),
+  );
 
   useEffect(() => {
     const load = async () => {
@@ -177,7 +195,7 @@ export default function App() {
     setResultsError("");
     try {
       const res = await fetch(`${API_URL}/api/votes/results`, {
-        headers: { "x-admin-password": adminKey }
+        headers: { "x-admin-password": adminKey },
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
@@ -217,7 +235,7 @@ export default function App() {
       const res = await fetch(`${API_URL}/api/votes`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ valentineId })
+        body: JSON.stringify({ valentineId }),
       });
 
       const data = await res.json();
@@ -241,7 +259,8 @@ export default function App() {
           <p className="eyebrow">Company Valentine Poll</p>
           <h1>Pick Your Valentine</h1>
           <p className="subtitle">
-            Select the colleague who made your workdays brighter. Glitter optional.
+            Select the colleague who made your workdays brighter. Glitter
+            optional.
           </p>
           <div className="tabs">
             <button
@@ -275,7 +294,8 @@ export default function App() {
                   <option value="">Select a valentine</option>
                   {valentineOptions.map((employee) => (
                     <option key={employee._id} value={employee._id}>
-                      {employee.name}{employee.department ? ` — ${employee.department}` : ""}
+                      {employee.name}
+                      {employee.department ? ` — ${employee.department}` : ""}
                     </option>
                   ))}
                 </select>
@@ -291,7 +311,8 @@ export default function App() {
             {success && <p className="notice success">{success}</p>}
 
             <p className="footnote">
-              One vote per user. Duplicate submissions are blocked faster than a bad pickup line.
+              One vote per user. Duplicate submissions are blocked faster than a
+              bad pickup line.
             </p>
           </>
         ) : (
@@ -299,7 +320,11 @@ export default function App() {
             <div className="admin-header">
               <h2>Results</h2>
               {adminKey && (
-                <button type="button" onClick={loadResults} disabled={resultsLoading}>
+                <button
+                  type="button"
+                  onClick={loadResults}
+                  disabled={resultsLoading}
+                >
                   {resultsLoading ? "Refreshing..." : "Refresh"}
                 </button>
               )}
@@ -333,7 +358,9 @@ export default function App() {
               </form>
             ) : (
               <>
-                {resultsLoading && <p className="hint">{resultsLoadingMessage}</p>}
+                {resultsLoading && (
+                  <p className="hint">{resultsLoadingMessage}</p>
+                )}
                 {resultsError && <p className="notice error">{resultsError}</p>}
                 {!resultsLoading && !resultsError && results.length === 0 && (
                   <p className="hint">{emptyResultsMessage}</p>
