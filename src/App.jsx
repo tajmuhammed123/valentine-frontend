@@ -140,6 +140,7 @@ export default function App() {
   );
   const [adminInput, setAdminInput] = useState("");
   const [adminMessage, setAdminMessage] = useState("");
+  const [deviceId, setDeviceId] = useState("");
   const [loadingMessage, setLoadingMessage] = useState(
     pick(fun.loadingEmployees),
   );
@@ -170,6 +171,20 @@ export default function App() {
     };
 
     load();
+  }, []);
+
+  useEffect(() => {
+    const key = "valentines_device_id";
+    const existing = localStorage.getItem(key);
+    if (existing) {
+      setDeviceId(existing);
+      return;
+    }
+    const newId =
+      (typeof crypto !== "undefined" && crypto.randomUUID && crypto.randomUUID()) ||
+      `device_${Math.random().toString(36).slice(2)}${Date.now().toString(36)}`;
+    localStorage.setItem(key, newId);
+    setDeviceId(newId);
   }, []);
 
   const valentineOptions = useMemo(() => employees, [employees]);
@@ -212,11 +227,17 @@ export default function App() {
   }, [view, adminKey]);
 
   const canSubmit = valentineId && !submitting && !success;
+  const canSendDevice = deviceId && deviceId.length > 0;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError("");
     setSuccess("");
+
+    if (!canSendDevice) {
+      setError(pick(fun.submitError));
+      return;
+    }
 
     if (!valentineId) {
       setError(pick(fun.needValentine));
@@ -227,7 +248,10 @@ export default function App() {
       setSubmitting(true);
       const res = await fetch(`${API_URL}/api/votes`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "x-device-id": deviceId,
+        },
         body: JSON.stringify({ valentineId }),
       });
 
