@@ -4,25 +4,17 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
 
 const fun = {
   needValentine: [
-    "Pick a valentine—Cupid refuses empty forms 😎",
-    "No selection and Cupid is tapping his tiny foot 👣",
-    "Choose someone before the chocolates melt 🍫",
+    "Oru try... Eni athava biriyani Kittiyalooo",
+    "Kittiyal Ooty illenki Chattii",
+    "Ingane okke nadanna mathiyooo",
   ],
 
   loadingEmployees: [
-    "Summoning the employee list with dramatic flair ✨",
-    "Warming up the Cupid database—stand by 💾",
-    "Fetching names faster than a love triangle starts 🏃",
-    "Assembling the roster of romantic possibilities 🗂️",
-    "Checking the office crush registry 👀",
+    "Kaathirikkuuu sundharii sundharaaa",
   ],
 
   loadEmployeesError: [
-    "We lost the employee list in a glitter storm ✨",
-    "Cupid misplaced the roster again, classic 🫠",
-    "The list ghosted us, tragic 💔",
-    "Roster not found—Cupid blames Mercury retrograde 🪐",
-    "We asked for names and got vibes instead 🌈",
+    "Aval poyedaaaaaa.....",
   ],
 
   submitSuccess: [
@@ -37,11 +29,12 @@ const fun = {
   ],
 
   submitError: [
-    "Vote failed—Cupid tripped over a cable 😵",
-    "Nope, the love server said not today 🙅",
-    "Error because Cupid’s Wi-Fi is acting single 📶",
-    "System error, Cupid is rebooting his wings 🔄",
-    "Something broke, blame the chocolates 🍫",
+    "Ninakk kalaparamayittulla kazhiv undoo, ninne nalalu ariyumoo... 👀",
+    "Dont try play fool with me Nikesh....",
+    "Velachil edukkaruth kettooo...",
+    "Oh god, You againnnn, veendum ningalooo!!!!",
+    "Koutham lesham kooduthala, maappakkanam!!",
+    "Ninne kandappo thanne enikk manassilayii, nee verum koothara alla looka koothara aanenn",
   ],
 
   dupeIp: [
@@ -80,9 +73,9 @@ const fun = {
   ],
 
   adminUnauthorized: [
-    "Nope, the love vault stays locked 🔒",
-    "Access denied because Cupid activated the glitter alarm ✨",
-    "Wrong password and Cupid shook his head 🙄",
+    "Pha paranari nee aaroodaan evide ninnaan kalikkunnathenn orma venom? 🤨",
+    "Ezheech podooo",
+    "Thurakkilla makaneeee",
   ],
 
   resultsLoading: [
